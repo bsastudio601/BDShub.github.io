@@ -81,13 +81,20 @@ body {
 
 .a {
     position: absolute;
-    top: 5%;
+    top: 1%;
     left: 50%;
     transform: translate(-50%, -50%);
 
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     color: aliceblue;
+}
+.p {
+    color: bisque;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 
