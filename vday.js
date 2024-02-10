@@ -40,7 +40,7 @@ noButton.addEventListener('click', () => {
         document.querySelector('.text').textContent = "Please";
         gif.src = "cute-anime-crying.gif"; // Change the text to "Please" for the first click
     } else {
-        document.querySelector('.text').textContent = "SAY YES PLZZZZ";
+        document.querySelector('.text').textContent = "SAY YES ~please~";
         gif.src = "crying-cute-anime.gif"; // Change the text to "SAY YES PLZZZZ" for subsequent clicks
     }
     
