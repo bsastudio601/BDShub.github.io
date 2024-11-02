@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎂</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Happy Birthday, Jeba! 🎉🎂</strong>
+                        <p>
+                            <p>I wanted to brighten your day with this little gift, created with love. 
+                                I feel so lucky to have you in my life.Your kindness and laughter truly made me happy.
+                            </p>
+                            <p>I wish you all the success in achieving your goals and dreams this year. May you continue to grow and thrive! 
+                            </p>
+                            <p>Thank you for everything you do. You’re truly appreciated! 
+                            </p>
+                            <p>With all my love,❤️....Arthi
+                            </p>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti/dist/confetti.browser.min.js"></script>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+    
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+            
+            if (envelope.classList.contains('flap')) {
+                // Trigger confetti when the envelope is opened
+                setTimeout(shootConfetti, 1000);
+            }
+        });
+    
+        function shootConfetti() {
+            const burstCount = 3; // Number of bursts
+            const delayBetweenBursts = 200; // Delay between bursts in milliseconds
+
+            for (let i = 0; i < burstCount; i++) {
+                setTimeout(() => {
+                    confetti({
+                        particleCount: 200, // Increased particle count for a fuller burst
+                        angle: 60,
+                        spread: 55,
+                        startVelocity: 50, // Increased velocity for a more dynamic effect
+                        decay: 0.9,
+                        origin: { x: 0, y: 1 },
+                        colors: ['#ff0', '#0f0', '#00f', '#ff4081', '#00ffcc']
+                    });
+
+                    confetti({
+                        particleCount: 200,
+                        angle: 120,
+                        spread: 55,
+                        startVelocity: 50,
+                        decay: 0.9,
+                        origin: { x: 1, y: 1 },
+                        colors: ['#ff0', '#0f0', '#00f', '#ff4081', '#00ffcc']
+                    });
+                }, i * delayBetweenBursts); // Stagger the bursts
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
