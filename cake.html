@@ -1,0 +1,43 @@
+<!--
+  EYE FREE MODEL 3D BY Oscar creativo by OSCAR CREATIVO is licensed under Creative Commons Attribution.
+  Juvenile Teratophoneus curriei byrankinstudio is licensed under Creative Commons Attribution.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A simple Three.JS App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>3D View</h1>
+    </header>
+
+    <main>
+      <div id="container3D"></div>
+    </main>
+
+    <!-- Confetti JS library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+      // Confetti effect on page load
+      window.onload = function() {
+        // Trigger confetti when the page is loaded
+        confetti({
+          particleCount: 200,  // Number of confetti particles
+          spread: 90,          // Spread angle of the confetti
+          origin: { x: 0.5, y: 0.5 },  // Start in the center of the screen
+          colors: ['#ff0000', '#00ff00', '#0000ff', '#ffcc00'],  // Confetti colors
+          gravity: 0.3,        // Gravity effect on confetti particles
+          ticks: 1000          // Duration of the confetti effect
+        });
+      };
+    </script>
+
+    <!-- Three.js script (Main script for your 3D model) -->
+    <script type="module" src="js/main.js"></script>
+
+  </body>
+</html>
