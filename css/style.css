@@ -1,1 +1,38 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(120deg, #2e3440, #6a4c4c); /* Gradient background */
+  font-family: Arial, sans-serif;
+}
 
+#container3D {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Apply full height and width to the body and HTML */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Optional background color */
+}
+
+/* Ensure the canvas fills the screen */
+#container3D {
+  width: 100%;
+  height: 100%;
+  display: block; /* Prevent margin or padding issues */
+}
+.confetti-canvas {
+  z-index: 2; /* If necessary, make confetti above other elements */
+}
